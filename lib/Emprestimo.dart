@@ -15,26 +15,46 @@ class MyEmprestimo extends State<Emprestimo> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Empréstimo"),
+              Text("Empréstimo", style: TextStyle(fontSize: 24)),
               Icon(Icons.arrow_right)
             ],
           ),
-          Text("Tudo Certo! Você está em dia"),
+          SizedBox(height: 10),
+          Text("Tudo Certo! Você está em dia", style: TextStyle(fontSize: 18)),
+          SizedBox(height: 30),
           Divider(height: 1),
-          Text("Descubra Mais"),
+          SizedBox(height: 30),
+          Text("Descubra Mais", style: TextStyle(fontSize: 24)),
           Card(
             child: ListTile(
               contentPadding: EdgeInsets.fromLTRB(0, 0, 0, 0),
               title: Column(
                 children: [
                   Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQarSZg3a4rnM-i_5zv-J0FFArW3-GMx-myVQ&s'),
-                  Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: ElevatedButton(onPressed: () {}, child: Text("Conhecer")),
-                  )
                 ],
               ),
+              subtitle: Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5.0),
+                      child: Text("Seguro de Vida", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5.0),
+                      child: Text("Cuide bem de quem você ama de um jeito simples", style: TextStyle(fontSize: 18, color: Colors.black54)),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 10.0, top: 5.0),
+                      child: ElevatedButton(onPressed: () {}, style: ButtonStyle(backgroundColor: MaterialStateProperty.all(const Color(0xFF8A05BE)),), child: Text("Conhecer", style: TextStyle(color: Colors.white),)),
+                    )
+                  ],
+                ),
+              )
             ),
           )
         ],

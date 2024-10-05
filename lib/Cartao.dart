@@ -17,14 +17,18 @@ class MyCartao extends State<Cartao> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Cartão de Crédito"),
+              Text("Cartão de Crédito", style: TextStyle(fontSize: 24)),
               Icon(Icons.arrow_right)
             ],
           ),
-          Text("Fatura Fechada"),
-          Text("R\$2170,68"),
-          Text("Vencimento dia 15"),
-          ElevatedButton(onPressed: () {}, child: Text("Renegociar"))
+          SizedBox(height: 10),
+          Text("Fatura Fechada", style: TextStyle(fontSize: 18, color: Colors.black54)),
+          SizedBox(height: 10),
+          Text("R\$2170,68", style: TextStyle(fontSize: 24)),
+          SizedBox(height: 15),
+          Text("Vencimento dia 15", style: TextStyle(fontSize: 18, color: Colors.black54)),
+          SizedBox(height: 15),
+          ElevatedButton(onPressed: () {}, child: Text("Renegociar", style: TextStyle(fontSize: 18, color: Colors.black)))
         ],
       )
     );
