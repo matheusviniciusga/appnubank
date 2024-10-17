@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_atvnubank/pagPerfil/HomePerfil.dart';
 import 'package:flutter_application_atvnubank/pagPrincipal/HomePage.dart';
 
 void main() {
@@ -15,7 +16,13 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xFF8A05BE),
-          leading: IconButton(onPressed: () {}, icon: Icon(Icons.person_outline), color: Colors.white, style: ButtonStyle(backgroundColor: MaterialStatePropertyAll<Color>(Color(0xFFBA4DE3)))),
+          leading: Builder(builder: (context) => IconButton(onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HomePerfil())
+              );
+            }, icon: Icon(Icons.person_outline), color: Colors.white, style: ButtonStyle(backgroundColor: MaterialStatePropertyAll<Color>(Color(0xFFBA4DE3)))),
+          ),
           actions: [
             IconButton(onPressed: () {}, icon: Icon(Icons.visibility_outlined), color: Color(0xFFF5F5F5)),
             IconButton(onPressed: () {}, icon: Icon(Icons.question_mark_rounded), color: Color(0xFFF5F5F5)),

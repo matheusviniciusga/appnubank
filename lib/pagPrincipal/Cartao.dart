@@ -18,7 +18,7 @@ class MyCartao extends State<Cartao> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("Cartão de Crédito", style: TextStyle(fontSize: 24)),
-              Icon(Icons.arrow_right)
+              Icon(Icons.arrow_forward_ios_outlined)
             ],
           ),
           SizedBox(height: 10),

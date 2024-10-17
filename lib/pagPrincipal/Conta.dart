@@ -18,7 +18,7 @@ class MyConta extends State<Conta> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("Conta", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-              Icon(Icons.arrow_right)
+              Icon(Icons.arrow_forward_ios_outlined)
             ],
           ),
           SizedBox(height: 10),
