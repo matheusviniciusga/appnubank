@@ -23,8 +23,8 @@ class MySaldo extends State<Saldo> {
             height: 150,
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+              child: ListView(
+                shrinkWrap: true,
                 children: [
                   botoesOp(Icons.move_down_rounded, "Depositar"),
                   botoesOp(Icons.payment_outlined, "Pagar"),
