@@ -2,9 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_atvnubank/pagPerfil/HomePerfil.dart';
 import 'package:flutter_application_atvnubank/pagPrincipal/HomePage.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'package:parse_server_sdk_flutter/parse_server_sdk_flutter.dart';
+
+Future<void> main() async {
+  const keyApplicationId = '';
+  const keyClientKey = '';
+  const keyParseServerUrl = '';
+  await Parse().initialize(
+    keyApplicationId,
+    keyParseServerUrl,
+    clientKey: keyClientKey, debug: true
+  );
+
+  runApp(const MainApp());
 }
+
+/*void main() {
+  runApp(const MyApp());
+}*/
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
