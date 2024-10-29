@@ -13,23 +13,19 @@ class HomePage extends StatefulWidget {
 class MyHomePageApp extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(16),
+    return Expanded(
+      //margin: const EdgeInsets.all(16),
       child: ListView(
-        children: [
-          Column(
-            children: [
-              Conta(),
-              const SizedBox(height: 30),
-              Divider(height: 1),
-              const SizedBox(height: 30),
-              Cartao(),
-              const SizedBox(height: 30),
-              Divider(height: 1),
-              const SizedBox(height: 30),
-              Emprestimo()
-            ],
-          ),
+        children: const [
+          Conta(),
+          SizedBox(height: 30),
+          Divider(height: 1),
+          SizedBox(height: 30),
+          Cartao(),
+          SizedBox(height: 30),
+          Divider(height: 1),
+          SizedBox(height: 30),
+          Emprestimo()
         ],
       ),
     );
