@@ -10,7 +10,7 @@ class AppBody extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xFF8A05BE),
         leading: IconButton(onPressed: () {
-          Navigator.pushNamed(context, '/profile');
+          Navigator.pushNamed(context, '/conta');
         }, icon: const Icon(Icons.person_outline), color: Colors.white),
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.visibility_outlined), color: const Color(0xFFF5F5F5)),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_atvnubank/pagPerfil/HomePerfil.dart';
+import 'package:flutter_application_atvnubank/pagConta/MinhaConta.dart';
 import 'package:flutter_application_atvnubank/pagPrincipal/AppBody.dart';
 
 import 'package:parse_server_sdk_flutter/parse_server_sdk_flutter.dart';
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const AppBody(),
-        '/profile': (context) => const HomePerfil()
+        '/conta': (context) => const MinhaConta()
       },
     );
   }

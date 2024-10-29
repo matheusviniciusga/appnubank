@@ -13,8 +13,8 @@ class HomePage extends StatefulWidget {
 class MyHomePageApp extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      //margin: const EdgeInsets.all(16),
+    return Container(
+      margin: const EdgeInsets.all(16),
       child: ListView(
         children: const [
           Conta(),

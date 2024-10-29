@@ -22,34 +22,14 @@ class MyConta extends State<Conta> {
         ),
         const SizedBox(height: 10),
         const Text("R\$1233,80", style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
-        const SizedBox(height: 10),
+        const SizedBox(height: 30),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Column(
-              children: [
-                IconButton.filledTonal(onPressed: () {}, icon: const Icon(Icons.pix), padding: const EdgeInsets.all(25)),
-                const Text("Área Pix", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))
-              ]
-            ),
-            Column(
-              children: [
-                IconButton.filledTonal(onPressed: () {}, icon: const Icon(Icons.money), padding: const EdgeInsets.all(25)),
-                const Text("Pagamentos", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))
-              ]
-            ),
-            Column(
-              children: [
-                IconButton.filledTonal(onPressed: () {}, icon: const Icon(Icons.qr_code), padding: const EdgeInsets.all(25)),
-                const Text("QRcode", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))
-              ]
-            ),
-            Column(
-              children: [
-                IconButton.filledTonal(onPressed: () {}, icon: const Icon(Icons.attach_money), padding: const EdgeInsets.all(25)),
-                const Text("Transferir", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))
-              ]
-            ),
+            botoesConta(Icons.pix, "Área Pix"),
+            botoesConta(Icons.money, "Pagamentos"),
+            botoesConta(Icons.qr_code, "QRcode"),
+            botoesConta(Icons.attach_money, "Transferir")
           ]
         ),
         const SizedBox(height: 30),
@@ -71,4 +51,13 @@ class MyConta extends State<Conta> {
       ],
     );
   }
+}
+
+Widget botoesConta(IconData icon, String text) {
+  return Column(
+    children: [
+      IconButton.filledTonal(onPressed: () {}, icon: Icon(icon), padding: const EdgeInsets.all(25)),
+      Text(text, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold))
+    ],
+  );
 }
