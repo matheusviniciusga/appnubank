@@ -13,15 +13,25 @@ class MyConta extends State<Conta> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("Conta", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-            Icon(Icons.arrow_forward_ios_outlined)
-          ],
+        InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, '/conta');
+          },
+          child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Conta", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                  Icon(Icons.arrow_forward_ios_outlined)
+                ],
+              ),
+              SizedBox(height: 10),
+              Text("R\$1233,80", style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold))
+            ],
+          )
         ),
-        const SizedBox(height: 10),
-        const Text("R\$1233,80", style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
         const SizedBox(height: 30),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
